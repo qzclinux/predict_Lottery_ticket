@@ -5,6 +5,7 @@ RUN mkdir /data && rm -f /etc/localtime \
 && echo "Asia/Shanghai" > /etc/timezone  \
 && pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-cpu==2.6.1 tensorflow-addons==0.10.0 requests==2.22.0 keras==2.6.0 beautifulsoup4==4.9.3 pandas==1.0.0 numpy==1.19.5 lxml==4.6.2 loguru==0.6.0 grpcio==1.46.0 protobuf==3.18.1
 ADD . /data
+WORKDIR /data
 ##双色球
 CMD ["/usr/local/bin/python", "get_data.py  --name ssq","run_train_model.py --name ssq","python run_predict.py  --name ssq"]
 ##大乐透
