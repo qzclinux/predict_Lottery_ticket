@@ -7,6 +7,6 @@ RUN mkdir /data && rm -f /etc/localtime \
 ADD . /data
 WORKDIR /data
 ##双色球
-CMD ["/usr/local/bin/python", "get_data.py  --name ssq","run_train_model.py --name ssq","python run_predict.py  --name ssq"]
+CMD ["/usr/local/bin/python", "get_data.py", "--name", "ssq", "run_train_model.py", "--name", "ssq", "run_predict.py", "--name", "ssq"]
 ##大乐透
-#CMD ["/usr/local/bin/python", "get_data.py  --name dlt","run_train_model.py --name dlt","python run_predict.py  --name dlt"]
+#CMD ["/usr/local/bin/python", "get_data.py", "--name", "dlt", "run_train_model.py", "--name", "dlt", "run_predict.py", "--name", "dlt"]
